@@ -1,0 +1,22 @@
+{
+  "name": "adopt_tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/scss/main.scss ./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Eryk-Gesich/adopt-tree.git"
+  },
+  "author": "Eryk Gęsich",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/Eryk-Gesich/adopt-tree/issues"
+  },
+  "homepage": "https://github.com/Eryk-Gesich/adopt-tree#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
