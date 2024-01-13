@@ -1,0 +1,81 @@
+// --------------------------
+// BUTTONS
+@import "variables";
+
+
+// ---------------------------
+// BUTTONS: Default styling
+
+@mixin btn-base {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: $border-radius-xl;
+  border: toRem(1px) solid;
+  font-size: $font-size;
+  font-family: $font-family-1;
+  font-weight: $font-bold;
+  line-height: $line-height;
+  padding: $btn-padding-v $btn-padding-h;
+  transition: $transition-linear;
+
+  &:hover, &:focus {
+    transition: $transition-ease-in;
+  }
+
+  &:focus {
+    outline: toRem(1px) solid $color-focus;
+  }
+}
+
+.btn {
+  @include btn-base;
+}
+
+// ---------------------------------
+// BUTTONS: Solid
+// Use for buttons with solid background colors
+// All parameters have default settings
+// parameters:
+//  - $color {string}: text color (hex, css color etc.)
+//  - $color-bg {string}: background color
+//  - $color-bg-hover {string}: background color on hover
+//  - $border-color {string}: border color: background color is default
+
+@mixin btn-solid($color: $white, $color-bg: $brand-1, $color-bg-hover: $brand-1-light, $color-border: $color-bg) {
+  color: $color;
+  background-color: $color-bg;
+  border: $color-border;
+  box-shadow: $box-shadow;
+
+  &:hover, &:focus {
+    background-color: $color-bg-hover;
+    border: $color-bg-hover;
+  }
+}
+
+@mixin btn--brand-1 {
+  @include btn-solid;
+}
+
+.btn--brand-1 {
+  @include btn--brand-1;
+}
+
+@mixin btn--brand-2 {
+  @include btn-solid($color-bg: $brand-2, $color-bg-hover: $brand-2-light);
+}
+
+.btn--brand-2 {
+  @include btn--brand-2;
+}
+
+@mixin btn--white {
+  @include btn-solid($color: $brand-1, $color-bg: $white, $color-bg-hover: $gray-mist);
+}
+
+.btn--white {
+  @include btn--white;
+}
