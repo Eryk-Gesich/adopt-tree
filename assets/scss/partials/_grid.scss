@@ -1,0 +1,11 @@
+// ----------------------------
+// VARIABLES: GRID: CONTAINERS
+// - Wrap a row in container
+
+// Container: Mixin
+// - All parameters have defaults
+// - Parameters:
+// - $max-width {number}: Maximum width
+// - $grid-gutter {number}: Gutter or horizontal padding
+
+@mixin container ($max-width: ) {}
