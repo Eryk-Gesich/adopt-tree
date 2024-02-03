@@ -58,3 +58,29 @@
 .row-lg {
   @include row($grid-gutter: $grid-gutter-lg);
 }
+
+// ---------------------------------------------
+// GRID: COLUMNS
+//  - Wrap in a row:
+//  - Columns create gutters
+//  - All parameters have defaults
+//  - Parameters:
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+@mixin col($grid-gutter: $grid-gutter) {
+  @if $grid-gutter {
+    padding-inline: $grid-gutter;
+  }
+}
+
+.col {
+  @include col;
+}
+
+.col-sm {
+  @include col($grid-gutter: $grid-gutter-sm);
+}
+
+.col-lg {
+  @include col($grid-gutter: $grid-gutter-lg);
+}
