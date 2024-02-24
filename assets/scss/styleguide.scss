@@ -4,6 +4,7 @@
 @use "sass:math";
 @import "partials/functions";
 @import "partials/variables";
+@import "partials/mixins";
 
 // Variables: Style Guide: Sidebar
 $styleguide-sidebar-width: toRem(200px);
@@ -261,4 +262,46 @@ ul > li {
 
 ul {
   padding-left: 0;
+}
+
+//CSS method for style of @media screen
+
+/*@media screen and (max-width: 700px) {
+  .styleguide {
+    background-color: gold;
+  }
+}
+
+@media screen and (min-height: 500px) {
+  .styleguide {
+    background-color: green;
+  }
+}*/
+
+//Sass method for style of media screen
+
+/*.styleguide {
+  background-color: silver;
+
+  @media screen and (max-width: 700px) {
+    background-color: gold;
+  }
+  @media screen and (min-height: 500px) {
+    background-color: green;
+  }
+}*/
+
+.styleguide {
+  background-color: silver;
+  transition: all 3s;
+
+  @include mq(sm) {
+    background: red;
+  }
+  @include mq(md){
+    background-color: gold;
+  }
+  @include mq(lg){
+    background-color: green;
+  }
 }
