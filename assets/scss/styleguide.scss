@@ -290,33 +290,3 @@ ul {
     background-color: green;
   }
 }*/
-
-.styleguide {
-  background-color: silver;
-  transition: all 3s;
-
-  @include mq(sm) {
-    background: red;
-  }
-  @include mq(md) {
-    background-color: gold;
-  }
-  @include mq(lg) {
-    background-color: green;
-  }
-  @media screen and (orientation: landscape) {
-    background: pink;
-  }
-  @media screen and (orientation: portrait) {
-    background: blue;
-  }
-  @media screen and (aspect-ratio: 6/3) {
-  background: peru;
-  }
-  @media screen and (prefers-color-scheme: dark) {
-    background: black;
-  }
-  @media screen and (prefers-color-scheme: light) {
-    background: olivedrab;
-  }
-}
